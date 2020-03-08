@@ -40,21 +40,14 @@ class TravilioController extends Controller
                     $param[$k][$ky] => 1,
                 ]);
             }
-            echo '<pre>';
 
-            usort($monitors, function ($element1, $element2) {
-                $datetime1 = $element1['Rate'];
-                $datetime2 =$element2['Rate'];
-                return $datetime1 - $datetime2;
-            }
-            );
 
             $someArray = json_decode($monitors[0], true);
             array_multisort(array_map(function($element) {
                 return $element['Rate'];
             }, $someArray), SORT_DESC, $someArray);
             echo '<pre>';
-            print_r(json_encode($someArray));
+            echo json_encode($someArray);
         }
     }
 
