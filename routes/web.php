@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('post','TravilioController@postRequest');
-Route::get('get','TravilioController@getRequest');
 Route::get('monitor','TravilioController@searchHotels');
