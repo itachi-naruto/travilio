@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('monitor','TravilioController@searchHotels');
+Route::get('monitor','SearchController@index');
