@@ -20,7 +20,8 @@ class SearchHotels
         ];
     }
 
-    public function getResponse(string $uri = null)
+
+    public function getResponse( $uri = null)
     {
        $full_path = $uri;
 
@@ -41,7 +42,8 @@ class SearchHotels
         return null;
     }
 
-    public function postResponse(string $uri = null, array $post_params = [])
+    public function postResponse( $uri = null,  $post_params = [])
+
     {
         $full_path = $uri;
 
